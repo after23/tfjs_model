@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"> </script>
+<head>
+<title>YaBe</title>
+</head>
+<body>
+    <center>
+        <p>Location prediction using RSSI</p>
+        <br>
+        <p>input should be somewhere between -90 and 0</p>
+    </center>
+
+    <center>1st RSSI reading : <input id="first"></center>
+    <br> <br>
+    <center>2nd RSSI reading : <input id="second"></center>
+    <br> <br>
+    <center>3rd RSSI reading : <input id="third"></center>
+    <br> <br>
+    <center>4th RSSI reading : <input id="fourth"></center>
+    <br> <br>
+    <center>5th RSSI reading : <input id="fifth"></center>
+    <br> <br>
+    <center>6th RSSI reading : <input id="sixth"></center>
+    <br> <br>
+    <center>7th RSSI reading : <input id="seventh"></center>
+    <br> <br>
+
+    <center>The model used 10 RSSI reading, the other 9 will be generated randomly xd </center>
+    <br> <br>
+
+    <center><button id="button">predict</button></center>
+    <br> <br>
+    <center><input id="answerx"><input id="answery"></center>
+    <br> <br>
+
+    <script src="script.js"></script>
+</body>
+</html>
