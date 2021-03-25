@@ -35,6 +35,7 @@ async function loadModel() {
     console.log(input)
     input_xs = tf.tensor3d(input, [1,10,7]);
     output = model.predict(input_xs);
+    console.log(output)
     const outputData = output.dataSync();
     console.log(outputData)
     document.getElementById("answerx").value = "x = " + outputData[0]  ;
