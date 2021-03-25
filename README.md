@@ -23,14 +23,14 @@ dimana input merupakan array berisi 70 bacaan rssi.
 ## Prediksi
 Prediksi dibuat dengan menggunakan kelas .predict pada model
 
-'''javascript
+```javascript
 output = model.predict(input_3d);
-'''
+```
 
 yang mengembalikan data berupa tf.tensor. untuk memperoleh hasil prediksi digunakan kelas .dataSync pada tensor
 
-'''javascript
+```javascript
 const outputData = output.dataSync();
-'''
+```
 
 hasil prediksi merupakan posisi x dan y yang disimpan dalam array 1d dimana index 0 merupakan posisi x dan index 1 merupakan posisi y
