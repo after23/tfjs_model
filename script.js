@@ -14,26 +14,16 @@ async function loadModel() {
     b = (Number(document.getElementById("second").value)+100)/100;
     c = (Number(document.getElementById("third").value)+100)/100;
     d = (Number(document.getElementById("fourth").value)+100)/100;
-    //e = (Number(document.getElementById("fifth").value)+90)/90;
-    //f = (Number(document.getElementById("sixth").value)+90)/90;
-    //g = (Number(document.getElementById("seventh").value)+90)/90;
-    var input = [a,b,c,d];
-    for (var x = 4; x < 40; x++){
-        input.push(Math.floor( Math.random() * 90 )/90)
+    e = (Number(document.getElementById("fifth").value)+100)/100;
+    f = (Number(document.getElementById("sixth").value)+100)/100;
+
+    var input = [a,b,c,d,e,f];
+    for (var x = 6; x < 60; x++){
+        input.push(Math.floor( Math.random() * 100 )/100)
     }
-    // var test = []
-    // test.push(input)
-    // for (var x = 0; x < 9; x++){
-    //   var temp = [];
-    //   for (var y = 0; y <= 6; y++){
-    //     temp.push(Math.floor( Math.random() * 90 )/90)
-    //   };
-    //   test.push(temp)
-    // };
-    // console.log(test)
 
     console.log(input)
-    input_xs = tf.tensor3d(input, [1,10,4]);
+    input_xs = tf.tensor3d(input, [1,10,6]);
     output = model.predict(input_xs);
     console.log(output)
     const outputData = output.dataSync();
