@@ -3,7 +3,7 @@ const ans = document.getElementById("answer");
 
 async function loadModel() {
     model = undefined;
-    model = await tf.loadLayersModel("https://raw.githubusercontent.com/after23/tfjs_model/main/noiseless-augmented-4-apr/1FC-1LSTM/model.json");
+    model = await tf.loadLayersModel("https://raw.githubusercontent.com/after23/tfjs_model/main/noise-augmented-18-apr/new_conf/4FC%2B1LSTM/model.json");
     console.log("model loaded")
   }
   loadModel();
